@@ -593,25 +593,25 @@ function placePieces(square,row,col){
         switch(col){
             case 0:
             case 7://rooks
-                place(square,color+'Rook.png');
+                place(square,color+'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/Rook.png)');
                 square.dataset.piece=color+"R";
                 break;
             case 1:
             case 6://knights
-                place(square,color+'Knight.png');
+                place(square,color+'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/Knight.png)');
                 square.dataset.piece=color+"N";
                 break;
             case 2:
             case 5: //bishops
-                place(square,color+'Bishop.png');
+                place(square,color+'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/Bishop.png)');
                 square.dataset.piece=color+"B";
                 break;
             case 3: //queen
-                place(square,color+'Queen.png');
+                place(square,color+'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/Queen.png)');
                 square.dataset.piece=color+"Q";
                 break;
             default: //king
-                place(square,color+'King.png');
+                place(square,color+'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/King.png'));
                 square.dataset.piece=color+"K";
         }
     } 
