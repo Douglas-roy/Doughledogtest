@@ -583,10 +583,10 @@ function placePieces(square,row,col){
         return;
     }
     if(row==6){
-        place(square,'wPawn.png');
+        place(square,'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/wPawn.png)');
         square.dataset.piece="wP";
     }else if(row==1){
-        place(square,'bPawn.png');
+        place(square,'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bPawn.png');
         square.dataset.piece="bP";
     }else{
         let color=row?"w":"b";
