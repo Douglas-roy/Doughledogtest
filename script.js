@@ -603,7 +603,7 @@ function placePieces(square,row,col){
                 break;
             case 2:
             case 5: //bishops
-                place(square, 'pieces/${color}Bishop.png`);
+                place(square, 'pieces/${color}Bishop.png');
                 square.dataset.piece=color+"B";
                 break;
             case 3: //queen
@@ -611,7 +611,7 @@ function placePieces(square,row,col){
                 square.dataset.piece=color+"Q";
                 break;
             default: //king
-                place(square, `pieces/${color}King.png`);
+                place(square, 'pieces/${color}King.png');
                 square.dataset.piece=color+"K";
         }
     } 
