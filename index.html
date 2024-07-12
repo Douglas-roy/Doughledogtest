@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/styles.css">
+</head>
+<body>
+    
+    <div class="board-container">
+        <div class="board" id="board"style="float: left"></div>
+         <div id="sideLog" class="side-log" style="float: left"></div>
+    </div>
+    <div class="container">
+        <input type="text" id="moveInput" class="textfield" autocomplete="off" placeholder="Enter your move...">
+        <div class="toggle-container">
+            <input type="checkbox" id="toggleButton">
+            <label for="toggleButton" class="toggle-label">Reconnaissance vocale désactivée</label>
+          </div>
+      </div>
+      
+    <div class="container">
+        <button id="resignButton">Abandonne mec</button>
+    <button id="drawButton">50-50 ça te va ?</button>
+    <button id="flipButton">Retourner</button>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+          <h2 id="popupTitle">Echec et mat bg!</h2>
+          <p>Partie terminée. Rafraîchis la page pour en refaire une.</p>
+          <button id="refreshButton">Refraîchr</button>
+          <button id="closeButton">Fermer</button>
+        </div>
+      </div>
+    <div id="promotionOverlayW" class="overlay">
+        <div class="overlay-content white">     
+            <div class="promotion-optionsW">
+                <!-- White piece options -->
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/wQueen.png" class="promotion-option" data-piece="wQ" alt="Queen">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/wRook.png" class="promotion-option" data-piece="wR" alt="Rook">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/wBishop.png" class="promotion-option" data-piece="wB" alt="Bishop">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/wKnight.png" class="promotion-option" data-piece="wN" alt="Knight">
+                
+            </div>
+            <button id="closeOverlayButton">X</button>
+        </div> 
+    </div>
+    <div id="promotionOverlayB" class="overlay">
+        <div class="overlay-content black">     
+            <div class="promotion-optionsB">
+                <!-- Black piece options -->
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bQueen.png" class="promotion-option" data-piece="bQ" alt="Queen">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bRook.png" class="promotion-option" data-piece="bR" alt="Rook">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bBishop.png" class="promotion-option" data-piece="bB" alt="Bishop">
+                <img src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bKnight.png" class="promotion-option" data-piece="bN" alt="Knight">
+                
+            </div>
+            <button id="closeOverlayButton">X</button>
+        </div> 
+    </div>
+    <audio id="moveSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/move-self.mp3"></audio>
+    <audio id="captureSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/capture.mp3"></audio>
+    <audio id="endSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/game-end.mp3"></audio>
+    <audio id="castleSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/castle.mp3"></audio>
+    <audio id="promoteSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/promote.mp3"></audio>
+    <audio id="checkSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/move-check.mp3"></audio>
+    <audio id="illegalSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/illegal.mp3"></audio>
+    <audio id="parseSound" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/chessSounds/text.mp3"></audio>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pgn.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/vocal.js"></script>
+</body>
+</html>
