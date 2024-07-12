@@ -1,4 +1,4 @@
-import pgnClass from 'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pgn.js)';
+import pgnClass from 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pgn.js';
 const board = document.getElementById('board');
 const canvas = document.getElementById('canvas');
 const moveInput = document.getElementById('moveInput');
