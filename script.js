@@ -598,7 +598,7 @@ function placePieces(square,row,col){
                 break;
             case 1:
             case 6://knights
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/${color}Knight.png`');
+                place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/${color}Knight.png');
                 square.dataset.piece=color+"N";
                 break;
             case 2:
@@ -607,7 +607,7 @@ function placePieces(square,row,col){
                 square.dataset.piece=color+"B";
                 break;
             case 3: //queen
-                place(square, '`https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/${color}Queen.png`');
+                place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/${color}Queen.png');
                 square.dataset.piece=color+"Q";
                 break;
             default: //king
