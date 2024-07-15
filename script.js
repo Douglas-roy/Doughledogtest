@@ -589,7 +589,7 @@ function placePieces(square, row, col) {
         place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@main/pieces/bPawn.png');
         square.dataset.piece = "bP";
     } else {
-        let color = row === 7 ? "b" : "w"; // corrected: row === 0 instead of row ? "w" : "b"
+        let color = row?"w":"b"; // corrected: row === 0 instead of row ? "w" : "b"
         switch (col) {
             case 0:
             case 7: // rooks
