@@ -1,4 +1,4 @@
-import pgnClass from './pgn.js';
+import pgnClass from './pgn.js?v=1.0';
 const board = document.getElementById('board');
 const canvas = document.getElementById('canvas');
 const moveInput = document.getElementById('moveInput');
