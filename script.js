@@ -1,4 +1,4 @@
-import pgnClass from './pgn.js?v=1.0';
+import pgnClass from './pgn.js';
 const board = document.getElementById('board');
 const canvas = document.getElementById('canvas');
 const moveInput = document.getElementById('moveInput');
@@ -583,35 +583,35 @@ function placePieces(square, row, col) {
         return;
     }
     if (row == 6) {
-        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.1.0/pieces/wPawn.png');
+        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.2.0/pieces/wPawn.png');
         square.dataset.piece = "wP";
     } else if (row == 1) {
-        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.1.0/pieces/bPawn.png');
+        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.2.0/pieces/bPawn.png');
         square.dataset.piece = "bP";
     } else {
         let color = row?"w":"b"; // corrected: row === 0 instead of row ? "w" : "b"
         switch (col) {
             case 0:
             case 7: // rooks
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.1.0/pieces/${color}Rook.png`);
+                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.2.0/pieces/${color}Rook.png`);
                 square.dataset.piece = color + "R";
                 break;
             case 1:
             case 6: // knights
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.1.0/pieces/${color}Knight.png`);
+                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.2.0/pieces/${color}Knight.png`);
                 square.dataset.piece = color + "N";
                 break;
             case 2:
             case 5: // bishops
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.1.0/pieces/${color}Bishop.png`);
+                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.2.0/pieces/${color}Bishop.png`);
                 square.dataset.piece = color + "B";
                 break;
             case 3: // queen
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.1.0/pieces/${color}Queen.png`);
+                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.2.0/pieces/${color}Queen.png`);
                 square.dataset.piece = color + "Q";
                 break;
             default: // king
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.1.0/pieces/${color}King.png`);
+                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.2.0/pieces/${color}King.png`);
                 square.dataset.piece = color + "K";
         }
     }
