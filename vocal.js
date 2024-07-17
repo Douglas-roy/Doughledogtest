@@ -66,11 +66,11 @@ const toggleRecognition = () => {
     const toggleLabel = document.querySelector('.toggle-label');
     if (button.classList.contains('toggled')) {
         stopRecognition(); 
-        toggleLabel.textContent='Speech Off';
+        toggleLabel.textContent='Vocal Off';
         button.classList.remove('toggled');
     } else {
         startRecognition(); 
-        toggleLabel.textContent='Speech On';
+        toggleLabel.textContent='Vocal On';
         button.classList.add('toggled');
     }
 };
