@@ -108,6 +108,7 @@ function translate(transcript){
         "à": "a",
         "rock" : "roque",
         "p'tit": "petit",
+        
     };
 
     // Ignorer "pion"
