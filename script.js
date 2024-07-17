@@ -583,35 +583,35 @@ function placePieces(square, row, col) {
         return;
     }
     if (row == 6) {
-        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.3.0/pieces/wPawn.png');
+        place(square, 'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/wPawn.png)');
         square.dataset.piece = "wP";
     } else if (row == 1) {
-        place(square, 'https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.3.0/pieces/bPawn.png');
+        place(square, 'url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/bPawn.png)');
         square.dataset.piece = "bP";
     } else {
         let color = row?"w":"b"; // corrected: row === 0 instead of row ? "w" : "b"
         switch (col) {
             case 0:
             case 7: // rooks
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.3.0/pieces/${color}Rook.png`);
+                place(square, `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${color}Rook.png)`);
                 square.dataset.piece = color + "R";
                 break;
             case 1:
             case 6: // knights
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.3.0/pieces/${color}Knight.png`);
+                place(square, `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${color}Knight.png)`);
                 square.dataset.piece = color + "N";
                 break;
             case 2:
             case 5: // bishops
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.3.0/pieces/${color}Bishop.png`);
+                place(square, `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${color}Bishop.png)`);
                 square.dataset.piece = color + "B";
                 break;
             case 3: // queen
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.3.0/pieces/${color}Queen.png`);
+                place(square, `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${color}Queen.png)`);
                 square.dataset.piece = color + "Q";
                 break;
             default: // king
-                place(square, `https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@vv1.3.0/pieces/${color}King.png`);
+                place(square, `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${color}King.png)`);
                 square.dataset.piece = color + "K";
         }
     }
@@ -624,7 +624,7 @@ function place(square, pieceSrc) {
     if(game.flip){
         piece.classList.add('flip-board');
     }
-    piece.style.backgroundImage = `url(${pieceSrc})`;
+    piece.style.backgroundImage = `url(https://cdn.jsdelivr.net/gh/Douglas-roy/Doughledogtest@v1.4.0/pieces/${pieceSrc})`;
     if(square.lastChild!=null){
         square.removeChild(square.lastChild);
     }
@@ -1417,6 +1417,29 @@ document.querySelectorAll(".promotion-option").forEach(function(option) {
         closePromotionOverlay(processPromo);
     });
 });
+
+//ouvrir fermer popup comment enoncer coup
+document.addEventListener('DOMContentLoaded', (event) => {
+    const howToButton = document.getElementById('howToButton');
+    const howToPopup = document.getElementById('howToPopup');
+    const closeHowToButton = document.getElementById('closeHowToButton');
+
+    howToButton.addEventListener('click', () => {
+        howToPopup.style.display = 'flex';
+    });
+
+    closeHowToButton.addEventListener('click', () => {
+        howToPopup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside the content
+    howToPopup.addEventListener('click', (event) => {
+        if (event.target === howToPopup) {
+            howToPopup.style.display = 'none';
+        }
+    });
+});
+
 
 let game=new Board();
 let pgnBuilder=new pgnClass();

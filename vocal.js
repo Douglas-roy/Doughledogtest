@@ -109,6 +109,9 @@ function translate(transcript){
         "rock" : "roque",
         "p'tit": "petit",
     };
+
+    // Ignorer "pion"
+    transcript = transcript.filter(word => word !== "pion");
     for (let i = 0; i < transcript.length; i++) {
         if (translations.hasOwnProperty(transcript[i])) {
             transcript[i] = translations[transcript[i]];
