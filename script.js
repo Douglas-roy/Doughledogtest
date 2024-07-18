@@ -583,41 +583,40 @@ function placePieces(square,row,col){
         return;
     }
     if(row==6){
-        place(square,'https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/wPawn.png');
+        place(square,'wPawn.png');
         square.dataset.piece="wP";
     }else if(row==1){
-        place(square,'https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/bPawn.png');
+        place(square,'bPawn.png');
         square.dataset.piece="bP";
     }else{
         let color=row?"w":"b";
         switch(col){
             case 0:
             case 7://rooks
-                place(square,`https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/${color}Rook.png`);
+                place(square,color+'Rook.png');
                 square.dataset.piece=color+"R";
                 break;
             case 1:
             case 6://knights
-                place(square,`https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/${color}Knight.png`);
+                place(square,color+'Knight.png');
                 square.dataset.piece=color+"N";
                 break;
             case 2:
             case 5: //bishops
-                place(square,`https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/${color}Bishop.png`);
+                place(square,color+'Bishop.png');
                 square.dataset.piece=color+"B";
                 break;
             case 3: //queen
-                place(square,`https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/${color}Queen.png`);
+                place(square,color+'Queen.png');
                 square.dataset.piece=color+"Q";
                 break;
             default: //king
-                place(square,`https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.9.0/pieces/${color}King.png`);
+                place(square,color+'King.png');
                 square.dataset.piece=color+"K";
         }
     } 
     
 }
-
 //Function to place an individual piece
 function place(square, pieceSrc) {
     let piece = document.createElement('div');
@@ -625,7 +624,7 @@ function place(square, pieceSrc) {
     if(game.flip){
         piece.classList.add('flip-board');
     }
-    piece.style.backgroundImage = `url(${pieceSrc})`;
+    piece.style.backgroundImage = `url(pieces/${pieceSrc})`;
     if(square.lastChild!=null){
         square.removeChild(square.lastChild);
     }
@@ -1416,6 +1415,8 @@ document.querySelectorAll(".promotion-option").forEach(function(option) {
         game.promoPiece= option.getAttribute("src");
         game.promoPiece=game.promoPiece.substring(7);
         closePromotionOverlay(processPromo);
+
+
     });
 });
 
