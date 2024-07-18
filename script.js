@@ -625,7 +625,7 @@ function place(square, pieceSrc) {
     if(game.flip){
         piece.classList.add('flip-board');
     }
-    piece.style.backgroundImage = `url(https://rawcdn.githack.com/Douglas-roy/Doughledogtest/v1.7.0/pieces/${pieceSrc})`;
+    piece.style.backgroundImage = `url(${pieceSrc})`;
     if(square.lastChild!=null){
         square.removeChild(square.lastChild);
     }
